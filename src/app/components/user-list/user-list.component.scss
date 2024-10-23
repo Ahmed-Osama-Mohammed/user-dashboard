@@ -1,0 +1,87 @@
+// user-list.component.scss
+
+// Variables
+$primary-color: #3f51b5; // Material Indigo color
+$secondary-color: #ff4081; // Material Pink color
+$background-color: #f5f5f5; // Light gray background
+$card-bg-color: #ffffff; // White card background
+$border-radius: 8px; // Border radius for cards
+$shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Box shadow for cards
+
+// Main container styles
+.user-list {
+  padding: 20px;
+  background-color: $background-color;
+  min-height: 100vh; // Ensure the list takes full height
+
+  // Loading spinner styles
+  .loading {
+    text-align: center;
+    font-size: 1.5em;
+    color: $primary-color;
+  }
+
+  // User card styles
+  .user-card {
+    margin: 10px 0;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    overflow: hidden;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.02); // Scale effect on hover
+    }
+
+    // Card header styles
+    mat-card-header {
+      background-color: $primary-color;
+      color: white;
+      padding: 16px;
+
+      mat-card-title {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+
+      mat-card-subtitle {
+        font-size: 0.9em;
+        color: lighten(white, 30%); // Lighten white for subtitle
+      }
+    }
+
+    // Card image styles
+    mat-card-image {
+      height: 200px; // Fixed height for images
+      object-fit: cover; // Maintain aspect ratio
+    }
+  }
+
+  // Paginator styles
+  mat-paginator {
+    margin: 20px 0;
+  }
+}
+// user-list.component.scss
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th.mat-header-cell {
+    background-color: #3f51b5; // Header background color
+    color: white; // Header text color
+    padding: 8px;
+    text-align: left;
+  }
+
+  td.mat-cell {
+    padding: 8px;
+    border-bottom: 1px solid #ddd; // Border for rows
+  }
+
+  img {
+    width: 50px; // Avatar size
+    border-radius: 50%; // Circular avatar
+  }
+}
